@@ -1,0 +1,29 @@
+{
+  "name": "@0y0/exec",
+  "version": "0.0.0-alpha.0",
+  "description": "Execute code and get the return.",
+  "src": "lib/index.js",
+  "repository": "https://github.com/o0y0o/web-scraper",
+  "author": "Jason Chung",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "/lib"
+  ],
+  "keywords": [
+    "compile",
+    "execute",
+    "run",
+    "javascript",
+    "code",
+    "vm"
+  ],
+  "scripts": {
+    "format": "prettier --write {__tests__,lib}/**/*.js",
+    "lint": "eslint {__tests__,lib}/**/*.js",
+    "test": "jest",
+    "pkg": "[ $(yarn info $npm_package_name version) != $npm_package_version ] && yarn publish || echo Skip publishing due to v$npm_package_version exist"
+  }
+}

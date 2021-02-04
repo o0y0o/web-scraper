@@ -1,0 +1,26 @@
+{
+  "name": "web-scraper",
+  "version": "1.0.0",
+  "description": "A web scraper.",
+  "repository": "https://github.com/o0y0o/web-scraper",
+  "author": "Jason Chung",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "ncu": "ncu && lerna exec ncu",
+    "format": "lerna run format",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "ver": "lerna version --no-push && git tag | xargs git tag -d",
+    "pkg": "lerna publish from-package --yes"
+  },
+  "devDependencies": {
+    "@0y0/babel-preset-vanilla": "^1.0.1",
+    "@0y0/eslint-config-vanilla": "^1.1.2",
+    "@babel/core": "^7.12.13",
+    "eslint": "^7.19.0",
+    "jest": "^26.6.3",
+    "lerna": "^3.22.1",
+    "prettier": "^2.2.1"
+  }
+}
