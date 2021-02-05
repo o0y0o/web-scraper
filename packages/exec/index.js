@@ -30,9 +30,11 @@ function execObject(code, variables) {
   }, {})
 }
 
-function exec(code, variables) {
-  const execFn = typeof code === 'string' ? execString : execObject
-  return execFn(code, variables)
+function exec(...args) {
+  const [code] = args
+  if (typeof code === 'string') return execString(...args)
+  if (typeof code === 'object') return execObject(...args)
+  return code
 }
 
 exec.define = function (name, value) {
