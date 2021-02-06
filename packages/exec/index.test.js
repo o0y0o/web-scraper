@@ -1,4 +1,3 @@
-// eslint-disable no-template-curly-in-string
 const exec = require('./index')
 
 describe('@0y0/exec', () => {
@@ -13,7 +12,7 @@ describe('@0y0/exec', () => {
   }
 
   it('should execute the string type of code', () => {
-    const actual = exec('{{`Hi, ${str}`}}', variables)
+    const actual = exec('{{`Hi, ${str}`}}', variables) // eslint-disable-line no-template-curly-in-string
     expect(actual).toEqual('Hi, J')
   })
 
@@ -36,7 +35,7 @@ describe('@0y0/exec', () => {
   })
 
   it('should execute the object type of code', () => {
-    const code = { value: '{{`Hi, ${str}`}}' }
+    const code = { value: '{{`Hi, ${str}`}}' } // eslint-disable-line no-template-curly-in-string
     const expected = { value: 'Hi, J' }
     const actual = exec(code, variables)
     expect(actual).toEqual(expected)
