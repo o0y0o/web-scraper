@@ -1,6 +1,6 @@
 {
   "name": "@0y0/exec",
-  "version": "1.0.1",
+  "version": "1.0.0-rc.0",
   "description": "Execute code and get the return.",
   "src": "index.js",
   "repository": "https://github.com/o0y0o/web-scraper",
@@ -22,5 +22,10 @@
     "lint": "eslint *.js",
     "test": "jest",
     "pkg": "[ $(yarn info $npm_package_name version) != $npm_package_version ] && yarn publish || echo Skip publishing due to v$npm_package_version exist"
+  },
+  "babel": {
+    "presets": [
+      "@0y0/vanilla"
+    ]
   }
 }
