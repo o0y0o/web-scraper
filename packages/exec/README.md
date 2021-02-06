@@ -12,34 +12,49 @@ npm install --save @0y0/exec
 
 ```js
 const exec = require('@0y0/exec')
+```
 
-// Run the string type of code that wrap with `{{` and `}}`
+### 1. Run the string type of code wrapped with `{{` and `}}`.
+```js
 exec('{{`Hi, ${name}`}}', { name: 'JC' })
-// => 'Hi, JC'
+// 'Hi, JC'
+```
 
-// Run the object type of code
+### 2. Run the object type of code
+``` js
 exec({ value: '{{name}}' }, { name: 'JC' })
-// => { value: 'JC' }
+// { value: 'JC' }
+```
 
-// Run the array type of code with for/of
+### 3. Run the array type of code
+``` js
+exec(['{{name}}'], { name: 'JC' })
+// ['JC']
+```
+
+### 4. Run the array type of code with `for/of`
+```js
 exec(
   ['for(item of list)', { value: '{{item.name}}' }],
   { list: [{ name: 'JC' }] }
 )
-// => [{ value: 'JC' }]
+// [{ value: 'JC' }]
+```
 
-// Run the array type of code with for loop
+### 5. Run the array type of code with `for`
+```js
 exec(
   ['for(i=0;i<list.length;i++)', { value: '{{list[i].name}}' }],
   { list: [{ name: 'JC' }] }
 )
-// => [{ value: 'JC' }]
+// [{ value: 'JC' }]
+```
 
-// Inject global variables
-const add = (a, b) => a + b
-exec.define('add', add)
+### 6. Use global variables
+```js
+exec.define('add', (a, b) => a + b)
 exec('{{add(1,2)}}')
-// => 3
+// 3
 ```
 
 ## License

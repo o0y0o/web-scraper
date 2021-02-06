@@ -16,6 +16,20 @@ describe('@0y0/exec', () => {
     expect(actual).toEqual('Hi, J')
   })
 
+  it('should execute the object type of code', () => {
+    const code = { value: '{{`Hi, ${str}`}}' } // eslint-disable-line no-template-curly-in-string
+    const expected = { value: 'Hi, J' }
+    const actual = exec(code, variables)
+    expect(actual).toEqual(expected)
+  })
+
+  it('should execute the array type of code', () => {
+    const code = ['{{str+1}}', '{{str+2}}']
+    const expected = ['J1', 'J2']
+    const actual = exec(code, variables)
+    expect(actual).toEqual(expected)
+  })
+
   it('should execute the array type of code with `for/of` statement', () => {
     const forCode = 'for(item of arr)'
     const itemCode = { value: '{{item.num+item.num*2}}' }
@@ -30,13 +44,6 @@ describe('@0y0/exec', () => {
     const itemCode = { value: '{{arr[i].num+arr[i].num*2}}' }
     const code = [forCode, itemCode]
     const expected = [{ value: 3 }]
-    const actual = exec(code, variables)
-    expect(actual).toEqual(expected)
-  })
-
-  it('should execute the object type of code', () => {
-    const code = { value: '{{`Hi, ${str}`}}' } // eslint-disable-line no-template-curly-in-string
-    const expected = { value: 'Hi, J' }
     const actual = exec(code, variables)
     expect(actual).toEqual(expected)
   })

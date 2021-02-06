@@ -25,7 +25,7 @@ function execObject(code, vars) {
 function execArray(code, vars) {
   const [forCode, itemCode] = code
   const matches = /^for\((.+)\)$/.exec(forCode)
-  if (!matches) return code
+  if (!matches) return code.map(itemCode => execCode(itemCode, vars))
 
   const [, loopCode] = matches
   const forOfMatches = /^(.+) of (.+)$/.exec(loopCode)
