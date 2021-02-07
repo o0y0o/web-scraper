@@ -17,10 +17,14 @@
   "devDependencies": {
     "@0y0/babel-preset-vanilla": "^1.0.1",
     "@0y0/eslint-config-vanilla": "^1.1.2",
+    "@0y0/exec": "link:./packages/exec",
     "@babel/core": "^7.12.13",
     "eslint": "^7.19.0",
+    "fetch-mock": "^9.11.0",
+    "form-data": "^3.0.0",
     "jest": "^26.6.3",
     "lerna": "^3.22.1",
+    "node-fetch": "^2.6.1",
     "prettier": "^2.2.1"
   }
 }
