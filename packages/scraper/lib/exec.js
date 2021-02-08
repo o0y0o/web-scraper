@@ -10,7 +10,12 @@ function handleOutput(opt, $result) {
   return fn(opt, { $result })
 }
 
-module.exports = async function exec(opt) {
-  const result = await handleInput(opt.in)
-  await handleOutput(opt.out, result)
+module.exports = async function exec(opt, cb) {
+  try {
+    const result = await handleInput(opt.in)
+    await handleOutput(opt.out, result)
+    cb?.(undefined, opt, result)
+  } catch (error) {
+    cb?.(error, opt)
+  }
 }
