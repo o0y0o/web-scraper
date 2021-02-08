@@ -1,6 +1,6 @@
 {
   "name": "@0y0/scraper-plugin-http",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.3",
   "description": "A `@0y0/scraper`'s plugin to handle http input and output.",
   "main": "index.js",
   "repository": "https://github.com/o0y0o/web-scraper",
@@ -20,7 +20,7 @@
     "pkg": "[ $(yarn info $npm_package_name version) != $npm_package_version ] && yarn publish || echo Skip publishing due to v$npm_package_version exist"
   },
   "dependencies": {
-    "@0y0/exec-http": "^1.0.0-rc.0"
+    "@0y0/exec-http": "^1.0.0-rc.3"
   },
   "babel": {
     "presets": [

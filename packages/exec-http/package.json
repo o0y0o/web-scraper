@@ -1,6 +1,6 @@
 {
   "name": "@0y0/exec-http",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "description": "Run the http request and aggregate the results.",
   "main": "index.js",
   "repository": "https://github.com/o0y0o/web-scraper",
@@ -25,7 +25,7 @@
     "pkg": "[ $(yarn info $npm_package_name version) != $npm_package_version ] && yarn publish || echo Skip publishing due to v$npm_package_version exist"
   },
   "dependencies": {
-    "@0y0/exec": "^1.0.0-rc.0",
+    "@0y0/exec": "^1.0.0-rc.3",
     "form-data": "^3.0.0",
     "node-fetch": "^2.6.1"
   },
