@@ -1,6 +1,6 @@
 {
   "name": "@0y0/exec",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "description": "Execute code and get the return.",
   "main": "index.js",
   "repository": "https://github.com/o0y0o/web-scraper",
