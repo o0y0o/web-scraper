@@ -1,0 +1,37 @@
+{
+  "name": "@0y0/scraper-extensions",
+  "version": "1.0.0-rc.0",
+  "description": "Web scraper's extensions.",
+  "src": "index.js",
+  "repository": "https://github.com/o0y0o/web-scraper",
+  "author": "Jason Chung",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "web",
+    "scraper",
+    "scraping",
+    "crawler",
+    "crawling",
+    "spider",
+    "extensions"
+  ],
+  "scripts": {
+    "format": "prettier --write {*,lib/*}.js",
+    "lint": "eslint {*,lib/*}.js",
+    "pkg": "[ $(yarn info $npm_package_name version) != $npm_package_version ] && yarn publish || echo Skip publishing due to v$npm_package_version exist"
+  },
+  "dependencies": {
+    "dayjs": "^1.10.4"
+  },
+  "babel": {
+    "presets": [
+      "@0y0/vanilla"
+    ]
+  }
+}
