@@ -1,17 +1,17 @@
 const { job } = require('cron')
 const exec = require('./lib/exec')
 
-module.exports = async function runScraper(task) {
+module.exports = function runScraper(task, cb) {
   if (Array.isArray(task)) {
-    task.forEach(runScraper)
-  } else if (task.cron != null) {
+    task.forEach(subTask => runScraper(subTask, cb))
+  } else if (task.cronTime != null) {
     job({
       start: true,
       cronTime: task.cronTime,
       runOnInit: task.runCronOnInit,
-      onTick: () => exec(task)
+      onTick: () => exec(task, cb)
     })
   } else {
-    exec(task)
+    exec(task, cb)
   }
 }
