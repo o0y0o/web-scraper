@@ -8,6 +8,8 @@ Check out the following links to see more detail.
 
 | Package | Version |
 | ------- | ------- |
+| [@0y0/scraper](https://github.com/o0y0o/web-scraper/tree/master/packages/scraper) | [![npm](https://img.shields.io/npm/v/@0y0/scraper.svg)](https://www.npmjs.com/package/@0y0/scraper) |
+| [@0y0/scraper-plugin-http](https://github.com/o0y0o/web-scraper/tree/master/packages/scraper-plugin-http) | [![npm](https://img.shields.io/npm/v/@0y0/scraper-plugin-http.svg)](https://www.npmjs.com/package/@0y0/scraper-plugin-http) |
 | [@0y0/exec](https://github.com/o0y0o/web-scraper/tree/master/packages/exec) | [![npm](https://img.shields.io/npm/v/@0y0/exec.svg)](https://www.npmjs.com/package/@0y0/exec) |
 | [@0y0/exec-http](https://github.com/o0y0o/web-scraper/tree/master/packages/exec-http) | [![npm](https://img.shields.io/npm/v/@0y0/exec-http.svg)](https://www.npmjs.com/package/@0y0/exec-http) |
 

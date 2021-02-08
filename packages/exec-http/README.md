@@ -13,32 +13,36 @@ npm install --save @0y0/exec-http
 ```js
 const execHttp = require('@0y0/exec-http')
 
-execHttp({
-  // (object?) Global definitions
-  variables,
-  // (object) Request options
-  request: {
-    // (string) Request URL
-    url,
-    // (string?) Request method (Default: GET)
-    method,
-    // (object?) Request headers
-    headers,
-    // (string?) Request body type
-    // (Available: form, form-urlencoded, json)
-    type,
-    // (object?) Request body
-    body
+await execHttp(
+  // (object) Http execution options
+  {
+    // (object) Request options
+    request: {
+      // (string) Request URL
+      url,
+      // (string?) Request method
+      // (Default: GET)
+      method,
+      // (object?) Request headers
+      headers,
+      // (string?) Request body type
+      // (Available: form, form-urlencoded, json)
+      type,
+      // (object?) Request body
+      body
+    },
+    // (object?) Response options
+    response: {
+      // (string?) Response body type
+      // (Available: json, text)
+      type,
+      // (object?) Response body model transformer
+      model
+    }
   },
-  // (object?) Response options
-  response: {
-    // (string?) Response body type
-    // (Available: json, text)
-    type,
-    // (object?) Response body model transformer
-    model
-  }
-})
+  // (object?) Global definitions
+  variables
+)
 ```
 
 ## License
