@@ -1,8 +1,8 @@
 {
   "name": "@0y0/scraper",
-  "version": "1.0.0-rc.0",
+  "version": "1.0.0-rc.1",
   "description": "A web scraping tool that extracts any data from the web.",
-  "src": "index.js",
+  "main": "index.js",
   "repository": "https://github.com/o0y0o/web-scraper",
   "author": "Jason Chung",
   "license": "MIT",
