@@ -1,8 +1,8 @@
 {
   "name": "@0y0/exec",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "Execute code and get the return.",
-  "src": "index.js",
+  "main": "index.js",
   "repository": "https://github.com/o0y0o/web-scraper",
   "author": "Jason Chung",
   "license": "MIT",
