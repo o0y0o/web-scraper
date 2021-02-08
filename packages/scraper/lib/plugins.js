@@ -3,11 +3,11 @@ function resolvePluginModule(name) {
   if (matches) {
     const [, scopeName, pluginPrefix, pluginName] = matches
     switch (true) {
-      case pluginPrefix && pluginName:
+      case !!(pluginPrefix && pluginName):
         return name
-      case scopeName && !pluginPrefix && pluginName:
+      case !!(scopeName && !pluginPrefix && pluginName):
         return `@${scopeName}/scraper-plugin-${pluginName}`
-      case pluginName:
+      case !!pluginName:
         return `@0y0/scraper-plugin-${pluginName}`
     }
   }
