@@ -1,7 +1,7 @@
 {
-  "name": "@0y0/exec-http",
-  "version": "1.0.0-rc.1",
-  "description": "Run the http request and aggregate the results.",
+  "name": "@0y0/scraper-plugin-http",
+  "version": "1.0.0-rc.0",
+  "description": "A `@0y0/scraper`'s plugin to handle http input and output.",
   "src": "index.js",
   "repository": "https://github.com/o0y0o/web-scraper",
   "author": "Jason Chung",
@@ -9,25 +9,18 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "lib"
-  ],
   "keywords": [
-    "http",
-    "exec",
-    "aggregate",
-    "vm"
+    "web-scraper",
+    "scraper",
+    "http"
   ],
   "scripts": {
-    "format": "prettier --write {*,lib/*}.js",
-    "lint": "eslint {*,lib/*}.js",
-    "test": "jest",
+    "format": "prettier --write *.js",
+    "lint": "eslint *.js",
     "pkg": "[ $(yarn info $npm_package_name version) != $npm_package_version ] && yarn publish || echo Skip publishing due to v$npm_package_version exist"
   },
   "dependencies": {
-    "@0y0/exec": "^1.0.0-rc.0",
-    "form-data": "^3.0.0",
-    "node-fetch": "^2.6.1"
+    "@0y0/exec-http": "^1.0.0-rc.0"
   },
   "babel": {
     "presets": [

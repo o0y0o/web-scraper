@@ -13,14 +13,15 @@ npm install --save @0y0/exec-http
 ```js
 const execHttp = require('@0y0/exec-http')
 
-execHttp({
+await execHttp({
   // (object?) Global definitions
   variables,
   // (object) Request options
   request: {
     // (string) Request URL
     url,
-    // (string?) Request method (Default: GET)
+    // (string?) Request method
+    // (Default: GET)
     method,
     // (object?) Request headers
     headers,
