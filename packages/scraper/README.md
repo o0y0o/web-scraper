@@ -13,27 +13,28 @@ npm install --save @0y0/scraper
 ```js
 const runScraper = require('@0y0/scraper')
 
-// (object|array) Scraper options
-const options = {
-  // (string?) Cron time expression
-  cronTime,
-  // (bool?) Run cron after initialization
-  // (Default: false)
-  runCronOnInit,
-  // (object) Input options
-  in: {
-    // (string) Input plugin name
-    type,
-    ...inputPluginOptions
-  },
-  // (object) Output options
-  out: {
-    // (string) Output plugin name
-    type,
-    ...outputPluginOptions
+runScraper(
+  // (object|array) Scraper options
+  {
+    // (string?) Cron time expression
+    cronTime,
+    // (bool?) Run cron after initialization
+    // (Default: false)
+    runCronOnInit,
+    // (object) Input options
+    in: {
+      // (string) Input plugin name
+      type,
+      ...inputPluginOptions
+    },
+    // (object) Output options
+    out: {
+      // (string) Output plugin name
+      type,
+      ...outputPluginOptions
+    }
   }
-}
-runScraper(options)
+)
 ```
 
 ## License

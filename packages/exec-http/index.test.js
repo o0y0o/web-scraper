@@ -120,27 +120,29 @@ describe('@0y0/exec-http', () => {
   })
 
   it('should handle compound http request', async () => {
-    const actual = await execHttp({
-      variables: {
+    const actual = await execHttp(
+      {
+        request: {
+          url: '{{host+path}}',
+          method: 'POST',
+          type: 'json',
+          body: { value: '{{value}}' }
+        },
+        response: {
+          type: 'json',
+          model: {
+            code: '{{$resp.status}}',
+            value: '{{value}}',
+            resp: '{{$resp.body}}'
+          }
+        }
+      },
+      {
         host: fakeUrl,
         path: '/ping-pong',
         value: 1
-      },
-      request: {
-        url: '{{host+path}}',
-        method: 'POST',
-        type: 'json',
-        body: { value: '{{value}}' }
-      },
-      response: {
-        type: 'json',
-        model: {
-          code: '{{$resp.status}}',
-          value: '{{value}}',
-          resp: '{{$resp.body}}'
-        }
       }
-    })
+    )
     expect(actual).toEqual({
       code: 200,
       value: 1,
