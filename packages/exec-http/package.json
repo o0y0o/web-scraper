@@ -1,6 +1,6 @@
 {
   "name": "@0y0/exec-http",
-  "version": "1.0.0-rc.3",
+  "version": "1.0.0-rc.4",
   "description": "Run the http request and aggregate the results.",
   "main": "index.js",
   "repository": "https://github.com/o0y0o/web-scraper",

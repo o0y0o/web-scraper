@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
-const createRequest = require('./lib/request')
-const handleResponse = require('./lib/response')
+const createRequest = require('./lib/createRequest')
+const handleResponse = require('./lib/handleResponse')
 
 module.exports = async function execHttp(opt, vars) {
   const req = createRequest(opt.request, vars)
