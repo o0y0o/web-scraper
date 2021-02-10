@@ -1,7 +1,7 @@
 {
   "name": "@0y0/scraper-extensions",
-  "version": "1.0.0-rc.3",
-  "description": "Web scraper's extensions.",
+  "version": "1.0.0-rc.4",
+  "description": "A @0y0/scraper expansion pack.",
   "main": "index.js",
   "repository": "https://github.com/o0y0o/web-scraper",
   "author": "Jason Chung",

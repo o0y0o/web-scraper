@@ -1,4 +1,4 @@
-const requirePlugin = require('./plugins')
+const requirePlugin = require('./requirePlugin')
 
 function handleInput(opt) {
   const fn = requirePlugin(opt.type, 'in')
