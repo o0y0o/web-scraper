@@ -1,0 +1,32 @@
+{
+  "name": "@0y0/scraper-plugin-google-sheet",
+  "version": "1.0.0-rc.0",
+  "description": "A @0y0/scraper plugin to export data to google sheet.",
+  "main": "index.js",
+  "repository": "https://github.com/o0y0o/web-scraper",
+  "author": "Jason Chung",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "web-scraper",
+    "scraper",
+    "google-sheet",
+    "sheet"
+  ],
+  "scripts": {
+    "format": "prettier --write {*,lib/*}.js",
+    "lint": "eslint {*,lib/*}.js",
+    "pkg": "[ $(yarn info $npm_package_name version) != $npm_package_version ] && yarn publish || echo Skip publishing due to v$npm_package_version exist"
+  },
+  "dependencies": {
+    "@0y0/exec": "^1.0.0-rc.3",
+    "googleapis": "^67.0.0"
+  },
+  "babel": {
+    "presets": [
+      "@0y0/vanilla"
+    ]
+  }
+}
