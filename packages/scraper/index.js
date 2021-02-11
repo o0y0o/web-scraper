@@ -7,6 +7,7 @@ module.exports = function runScraper(task, cb) {
   } else if (task.cronTime != null) {
     job({
       start: true,
+      utcOffset: 0,
       cronTime: task.cronTime,
       runOnInit: task.runCronOnInit,
       onTick: () => exec(task, cb)
