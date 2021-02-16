@@ -1,6 +1,6 @@
 {
   "name": "@0y0/exec-http",
-  "version": "1.0.0-rc.4",
+  "version": "1.0.0-rc.5",
   "description": "Run the http request and aggregate the results.",
   "main": "index.js",
   "repository": "https://github.com/o0y0o/web-scraper",
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@0y0/exec": "^1.0.0-rc.3",
-    "form-data": "^3.0.0",
+    "form-data": "^4.0.0",
     "node-fetch": "^2.6.1"
   },
   "babel": {
