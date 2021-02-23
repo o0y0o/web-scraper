@@ -1,4 +1,4 @@
-const exec = require('./lib/exec')
+const runTask = require('./lib/runTask')
 
 module.exports = function runScraper(task, cb) {
   if (Array.isArray(task)) {
@@ -9,9 +9,9 @@ module.exports = function runScraper(task, cb) {
       utcOffset: 0,
       cronTime: task.cronTime,
       runOnInit: task.runCronOnInit,
-      onTick: () => exec(task, cb)
+      onTick: () => runTask(task, cb)
     })
   } else {
-    exec(task, cb)
+    runTask(task, cb)
   }
 }
