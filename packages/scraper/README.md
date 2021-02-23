@@ -29,6 +29,8 @@ runScraper(
     },
     // (object) Output options
     out: {
+      // (string) Whether to skip the output
+      skip,
       // (string) Output plugin name
       type,
       ...outputPluginOptions

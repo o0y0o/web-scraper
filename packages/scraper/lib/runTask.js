@@ -8,7 +8,7 @@ function handleInput(opt) {
 
 function handleOutput(opt, $result) {
   const vars = { $result }
-  if (opt.skip && exec(opt.skip, vars)) return
+  if (opt.skip != null && exec(opt.skip, vars)) return
   const fn = requirePlugin(opt.type, 'out')
   return fn(opt, vars)
 }
