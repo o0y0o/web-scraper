@@ -18,7 +18,7 @@
     "@0y0/babel-preset-vanilla": "^1.0.1",
     "@0y0/eslint-config-vanilla": "^1.1.2",
     "@0y0/exec": "link:./packages/exec",
-    "@babel/core": "^7.12.16",
+    "@babel/core": "^7.13.1",
     "eslint": "^7.20.0",
     "fetch-mock": "^9.11.0",
     "form-data": "^4.0.0",
