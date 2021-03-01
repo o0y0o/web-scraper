@@ -1,6 +1,6 @@
 {
   "name": "@0y0/scraper-extensions",
-  "version": "1.0.0-rc.4",
+  "version": "1.0.0",
   "description": "A @0y0/scraper expansion pack.",
   "main": "index.js",
   "repository": "https://github.com/o0y0o/web-scraper",
@@ -28,10 +28,5 @@
   },
   "dependencies": {
     "dayjs": "^1.10.4"
-  },
-  "babel": {
-    "presets": [
-      "@0y0/vanilla"
-    ]
   }
 }

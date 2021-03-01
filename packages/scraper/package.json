@@ -1,6 +1,6 @@
 {
   "name": "@0y0/scraper",
-  "version": "1.0.0-rc.9",
+  "version": "1.0.0",
   "description": "A web scraping tool that extracts any data from the web.",
   "main": "index.js",
   "repository": "https://github.com/o0y0o/web-scraper",
@@ -26,11 +26,6 @@
     "pkg": "[ $(yarn info $npm_package_name version) != $npm_package_version ] && yarn publish || echo Skip publishing due to v$npm_package_version exist"
   },
   "dependencies": {
-    "@0y0/exec": "^1.0.0-rc.3"
-  },
-  "babel": {
-    "presets": [
-      "@0y0/vanilla"
-    ]
+    "@0y0/exec": "^1.0.0"
   }
 }
