@@ -26,6 +26,6 @@
     "pkg": "[ $(yarn info $npm_package_name version) != $npm_package_version ] && yarn publish || echo Skip publishing due to v$npm_package_version exist"
   },
   "dependencies": {
-    "@0y0/exec": "^1.0.0"
+    "@0y0/exec": "^1.0.2"
   }
 }
