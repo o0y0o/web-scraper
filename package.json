@@ -18,7 +18,7 @@
     "@0y0/babel-preset-vanilla": "^1.1.2",
     "@0y0/eslint-config-vanilla": "^1.2.4",
     "@0y0/exec": "link:./packages/exec",
-    "eslint": "^7.26.0",
+    "eslint": "^7.28.0",
     "fetch-mock": "^9.11.0",
     "form-data": "^4.0.0",
     "jest": "^26.6.3",
