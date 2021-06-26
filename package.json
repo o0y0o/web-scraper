@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@0y0/babel-preset-vanilla": "^1.1.2",
-    "@0y0/eslint-config-vanilla": "^1.2.4",
+    "@0y0/eslint-config-vanilla": "^1.2.5",
     "@0y0/exec": "link:./packages/exec",
     "eslint": "^7.29.0",
     "fetch-mock": "^9.11.0",
