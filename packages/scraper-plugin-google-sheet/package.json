@@ -1,6 +1,6 @@
 {
   "name": "@0y0/scraper-plugin-google-sheet",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A @0y0/scraper plugin to export data to google sheet.",
   "main": "index.js",
   "repository": "https://github.com/o0y0o/web-scraper",
